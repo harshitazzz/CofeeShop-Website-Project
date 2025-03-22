@@ -3,44 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Olive Kitchen Menu</title>
-    <!-- font awesome cdn link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-    <!-- custom css file link -->
+    <title>Coffee Bliss</title>
     <link rel="stylesheet" href="./style.css">
-
 </head>
 <body>
-    <!-- header section starts -->
-    <header class="header">
-        <a href="#" class="logo">
-            <img src="./Images/logo.png" alt="logo">
-        </a>
-
-        <nav class="navbar">
-            <a href="#pizza">Pizza</a>
-            <a href="#burger">Burger</a>
-            <a href="#momos">Momos</a>
-            <a href="#sandwich">Sandwich</a>
-            <a href="#pasta">Pasta</a>
-            <a href="#shakes">Shakes</a>
+    <header>
+        <img id="logo" src="./Images/logo.png" alt="Coffee Bliss Logo">
+        <h1>Coffee Bliss</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="themeToggle">
+                    <img src="./Images/light-mode.png" alt="darkMode">
+                    </button>
+                </li>
+            </ul>
         </nav>
-
-        <div class="icons">
-            
-        </div>
     </header>
-    <!-- header section ends -->
     
-
-
-
-
-
-
-
-    <!-- custom js file link -->
-    <script src="./script.js"></script>
+    <section id="home" class="hero">
+        <img src="./Images/home.png" alt="Welcome to Coffee Bliss">
+        <h2>Welcome to Coffee Bliss</h2>
+        <p>Where every cup is brewed with love.</p>
+        <button onclick="scrollToSection('menu')">Explore Menu</button>
+    </section>
+    
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We serve the best coffee in town, made from freshly roasted beans.</p>
+    </section>
+    
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <ul>
+            <li onclick="chooseType('Espresso')">Espresso - $3 <img src="espresso.jpg" alt="Espresso"></li>
+            <li onclick="chooseType('Latte')">Latte - $4 <img src="latte.jpg" alt="Latte"></li>
+            <li onclick="chooseType('Cappuccino')">Cappuccino - $4 <img src="cappuccino.jpg" alt="Cappuccino"></li>
+            <li onclick="chooseType('Mocha')">Mocha - $5 <img src="mocha.jpg" alt="Mocha"></li>
+        </ul>
+    </section>
+    
+    <section id="reviews">
+        <h2>Customer Reviews</h2>
+        <p>"Best coffee shop ever!" - Jane</p>
+        <p>"Great ambiance and amazing coffee." - John</p>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: contact@coffeebliss.com</p>
+        <p>Phone: (123) 456-7890</p>
+    </section>
+    
+    <div id="selectionModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="selectionTitle"></h2>
+            <div id="options"></div>
+        </div>
+    </div>
+    
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+    
+    <script src="script.js"></script>
 </body>
 </html>
