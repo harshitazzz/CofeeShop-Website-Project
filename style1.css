@@ -1,0 +1,88 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f0e1;
+    color: #3e2723;
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #4a2c2a;
+    padding: 10px 20px;
+}
+
+#logo {
+    width: 50px;
+    height: auto;
+    margin-right: 15px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+#themeToggle img, #cartButton {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px;
+    background: url('home.jpg') no-repeat center center/cover;
+    color: white;
+}
+
+/* Menu */
+#menu ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+#menu ul li {
+    background-color: #d7a86e;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Modals */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #3e2723;
+    color: #f5f0e1;
+}

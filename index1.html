@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Bliss</title>
+    <link rel="stylesheet" href="./style1.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <img id="logo" src="./Images/logo.png" alt="Coffee Bliss Logo">
+        <h1>Welcome to Coffee Bliss</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="themeToggle"><img id="themeIcon" src="./Images/sun.png"></button></li>
+                <li><button id="cartButton">🛒 Cart (<span id="cartCount">0</span>)</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Menu Section -->
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-items">
+            <div class="menu-item" onclick="chooseCoffee('Espresso', 5)">
+                <img src="./Images/espresso.png">
+                <p>Espresso - $5</p>
+            </div>
+            <div class="menu-item" onclick="chooseCoffee('Cappuccino', 6)">
+                <img src="./Images/cappuccino.png">
+                <p>Cappuccino - $6</p>
+            </div>
+            <div class="menu-item" onclick="chooseCoffee('Latte', 7)">
+                <img src="./Images/latte.png">
+                <p>Latte - $7</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <h3>Your Cart</h3>
+            <ul id="cartItems"></ul>
+            <h3>Total: $<span id="cartTotal">0</span></h3>
+            <button onclick="checkout()">Proceed to Payment</button>
+            <button onclick="closeCart()">Close</button>
+        </div>
+    </div>
+
+    <script src="./script1.js"></script>
+</body>
+</html>
